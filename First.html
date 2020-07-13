@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title> First Assignment</title>
+    </head>
+   
+    <body>
+        <script>
+             var Date1 = new Date();   
+             var Day1 = Date1.getDay();
+
+             var week=["Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday"];
+             document.writeln("Today is :" +week[Day1]);
+             
+             
+              
+              var hrs = Date1.getHours();
+              var AP = hrs;
+              if (AP>=12){
+                  AP='PM';
+              }
+              else{
+                  AP='AM';
+              }
+              hrs =hrs%12;
+              hrs=hrs ? hrs :12;
+              var min =Date1.getMinutes();
+              min = min<10 ? '0' +min : min;
+              
+               var time = hrs+" "+AP+" : " +min + " : "+Date1.getUTCSeconds();
+               document.writeln("<br>");
+               document.writeln("Current Time is : "+time);
+
+        </script>
+        
+    </body>
+</html>
