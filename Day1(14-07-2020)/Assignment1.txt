@@ -1,0 +1,160 @@
+ Console Function Methods:
+
+1. Console.log();  :
+ >The Console.log() method writes a messge to the console.
+ >It is useful for testing.
+
+Example:
+<html>
+<body>
+   <h1>JavaScript console.log() Method</h1>
+   <script>
+          console.log("Hello world!");
+    </script>
+</body>
+</html>
+
+2.Console.error() :
+ >The Console.error() method writes an error message to the console.
+
+Example:
+<html>
+<body>
+   <h1>JavaScript console.error() Method</h1>
+   <script>
+          console.error("You made a mistake!");
+    </script>
+</body>
+</html>
+
+3.Console.warn() :
+ >The Console.warn() method writes a warning to the console.
+
+Example:
+<html>
+<body>
+   <h1>JavaScript console.warn() Method</h1>
+   <script>
+          console.error("Its Warning!");
+    </script>
+</body>
+</html>
+ 
+4.Console.clear() :
+ >The console.clear() method clears the console.
+ >The console.clear() method will also write a message in the console: "Console was cleared".
+
+Example:
+<html>
+<body>
+   <h1>JavaScript console.clear() Method</h1>
+   <script>
+          console.log("Console will clear this text.")
+          console.clear();
+    </script>
+</body>
+</html>
+
+5.Console.time() & Console.timeEnd() :
+ >The Console.time() method starts a timer in the console view.
+ > The Console.timeEnd() method to end the timer and display the result in the console.view.
+
+Example:
+<html>
+<body>
+   <h1>JavaScript console.time() & console.timeEnd() Method</h1>
+   <script>
+           console.time();
+          for (i = 0; i < 100000; i++) {}
+          console.timeEnd();
+    </script>
+</body>
+</html>
+
+6.Console.table() :
+ >The console.table() method writes a table in the console view.
+ >The first parameter is required, and must be either an object, or an array, containing data to fill the table.
+
+Example:
+<html>
+<body>
+   <h1>JavaScript console.table() Method</h1>
+   <script>
+         console.table(["Audi", "Mercedes", "Ford"]);
+    </script>
+</body>
+</html>
+
+7.Console.count() :
+ >The Console.count() writes to the console the number of times that particular console.count() is called.
+
+Example:
+<html>
+<body>
+  <h1>JavaScript console.count() Method</h1>
+   <script>
+      for (i = 0; i < 10; i++) {
+       console.count();
+     }
+   </script>
+</body>
+</html>
+
+8.Console.group & Console.groupEnd():
+ > The console.group() method to start a message group.
+ >The console.groupEnd() method indicates the end of a message group.
+
+Example:
+<html>
+<body>
+<h1>JavaScript console.group() Method</h1>
+   <script>
+       console.log("Hello world!");
+       console.group();
+       console.log("Hello again, this time inside a group!");
+       console.groupEnd();
+       console.log("and we are back.");
+   </script>
+</body>
+</html>
+ 
+9.Custom Console logs :
+ >User can add Styling to the console logs in order to make logs Custom .
+
+Example:
+<html>
+<body>
+<h1>JavaScript Custom Console logs  Method</h1>
+   <script>
+console.log('%c Hello World','color: red; font-weight: bold; font-size: 2rem;');
+   </script>
+</body>
+</html>
+
+
+10.Console.info() :
+ > The console.info() method writes a message to the console.
+
+Example:
+<html>
+<body>
+<h1>JavaScript console.info() Method</h1>
+   <script>
+        console.info("Hello World!!");
+   </script>
+</body>
+</html>
+
+11. Console.assert() 
+The console.assert() method writes a message to the console, but only if an expression evaluates to false.
+
+Example:
+<html>
+<body>
+<h1>JavaScript console.info() Method</h1>
+   <script>
+        console.assert(document.getElementById("demo"), "You have no element with ID 'demo'");
+   </script>
+</body>
+</html>
+

@@ -1,0 +1,136 @@
+Difference between var , const and lets :
+ 
+1. var declarations are globally scoped or function scoped while let and const are block scoped.
+
+2. var variables can be updated and re-declared within its scope, let variables can be updated but not re-declared, const variables can neither be updated nor re-declared.
+
+3.They are all hoisted to the top of their scope. But while var and let variables are initialized with undefined, const variables are not initialized with undefined.
+
+4.While var and let can be declared without being initialized, const must be initialized during declaration.
+
+
+Example:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Difference in redeclaration:
+        1.Var we can redeclare the same variable                                        */
+        var a=10;
+        var a=20;
+        a=30
+        document.write(a);
+        //  It will not give error .Output:30 
+
+        /* 2. Let we cannot redeclare the same variable*/
+        let b=10;
+        //let b=20;
+        document.write("<br>"+b);
+        //  Got an Error : Uncaught SyntaxError: Identifier 'b' has already been declared
+    
+        /* 3. Const we cannot redeclare the same variable*/
+        const c=10;
+        //const c=20;
+        document.write("<br>"+c);
+        //  Got an Error : Uncaught SyntaxError: Identifier 'c' has already been declared
+
+        /* Difference of initialization :
+        1.var is initialized with undefined*/
+
+        var d;
+        document.write("<br>"+d);
+        //Output:undefined
+
+        //2. let is  intialized with undefined
+
+        let e;
+        document.write("<br>"+e);
+        //Output:undefined
+ 
+        // 3.const is  intialized with undefined
+        //const f;
+        //document.write("<br>"+f);
+        //Output:Uncaught SyntaxError: Missing initializer in const declaration
+
+        //Difference in loop:
+        //1. Using var
+        // Do something one second after the loop runs:
+            for(var i = 0; i < 10; i++) {
+                
+                    setTimeout(function() {
+                            console.log('The number is ' + i);
+                                }, 1000);
+                        }
+        // If we then call i in the console it returns:     10
+     
+         //2.Using Let
+         // Do something one second after the loop runs:
+         for(let i = 0; i < 10; i++) {
+                
+                setTimeout(function() {
+                        console.log('The number is ' + i);
+                            }, 1000);
+                    }
+    /*// This returns 0 through 9 in the console, then after one second logs:
+        The number is 0
+        The number is 1
+        The number is 2
+        The number is 3
+        The number is 4
+        The number is 5
+        The number is 6
+        The number is 7
+        The number is 8
+        The number is 9
+    */
+
+    
+    //Differnce between var and let for scope
+
+    //1.var:
+
+     /* Using Var :Since we are using "var a=10", scope of "a" is limited to the function within which it is defined. In this case it is within the global function scope */
+    {
+    var s=10;
+    console.log(s);
+    } //block 1
+    {
+    s++;
+    console.log(s);
+    } //block 2
+    //Output:10 11
+    
+    //2.let:
+
+    /* Since we are using "let a=10", scope of "a" is limited to block 1 and "a" is not recognized in block 2 */
+
+    {
+    let t=10;
+    console.log(t);
+    } //block 1
+    {
+    t++;
+    console.log(t);
+    } //block 2
+    //Output:6.html:105 Uncaught ReferenceError: t is not defined .
+
+    //3.const:
+    /* Since we are using "const PI=3.14", scope of "PI" is limited to block 1 and "PI" is not recognized in block 2 */
+        
+    {
+    const PI=3.14;
+    console.log(PI);
+    } //block 1
+    {
+    console.log(PI);
+    } //block 2
+    //Output :Uncaught ReferenceError: PI is not defined
+     </script>
+</body>
+</html>

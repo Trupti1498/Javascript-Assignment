@@ -1,0 +1,110 @@
+Javascript Datatypes:
+
+JavaScript provides different data types to hold different types of values. There are two types of data types in JavaScript.
+
+1.Primitive data type
+2.Non-primitive (reference) data type
+
+I.Primitive Datatypes:
+
+There are five types of primitive data types in JavaScript. They are as follows:
+
+ 1.String  : Represents sequence of characters e.g. "hello"
+ 2.Number	 :  Represents numeric values  e.g. 100
+ 3.Boolean :  Represents boolean value either false or true
+ 4.Undefined:  Represents undefined value
+ 5.Null  :    Represents null i.e. no value at all
+
+Example:
+<html>
+<body>
+<script>
+<h2>Javascript Primitive Datatypes : </h2>
+var x;         // Now x is undefined
+var y = 5;         // Now y is a Number
+var z = "John";      // Now z is a String
+var k = null;        // Now k is a Null
+var l =5;	
+
+document.write(x);  			//undefined
+document.write("<br>"+y);  		// 5
+document.write("<br>"+z);		//John
+document.write("<br>"+k);		//null
+document.write((y==l)); 		// true :-boolean value
+</script>
+
+</body>
+</html>
+
+II.Non-Primitive Datatypes:
+
+The non-primitive data types are as follows:
+
+
+Object  :	Represents instance through which we can access members. Objects are written with curly braces {}.Object properties are written as name:value pairs, separated 	by commas.
+Array   :	Represents group of similar values.Arrays are written with square brackets[].Array items are separated by commas.
+RegExp:	Represents regular expression.
+
+1.Array & Object :
+
+Example:
+
+<html>
+<body>
+
+<h2>JavaScript Array & Objects</h2>
+
+<p id="demo"></p>
+<p id="sample"></p>
+<script>
+var person = {
+  firstName : "John",
+  age     : 50,
+};
+
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+
+var cars = ["Audi","Volvo","BMW"];
+
+document.getElementById("sample").innerHTML = cars[0];
+</script>
+
+</body>
+</html>
+
+Output:JavaScript Array & Objects
+	John is 50 years old.
+	Audi
+
+
+2. RegExp Object: 
+   
+   >A regular expression is an object that describes a pattern of characters.
+   >Regular expressions are used to perform pattern-matching and "search-and-replace" functions on text.
+      >>Syntax :  /pattern/modifiers;
+
+Example:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Regular Expressions</h2>
+
+<script>
+
+  var str = "Hello World !";
+  var patt = /Hello/i;
+  var result = str.match(patt);
+  document.write(result);
+
+</script>
+
+</body>
+</html>
+
+Ouput: JavaScript Regular Expressions
+           Hello
+
+
