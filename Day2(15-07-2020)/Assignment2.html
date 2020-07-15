@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <h2 style="color: blue;"> Assignment 2 :</h2>
+    <p style="color:crimson;">  To See Result :- Press Fn-F12 to see it!!</p>
+    <p style="color: blueviolet;">Array Methods :
+    <ol>
+    <li> Length() Method: Returns lenght of an Array.</li>
+        <li>Sort() Method : Sorts array in acesending/decending order</li>
+        <li>IndexOf() Method: Return element at specified index.</li>
+        <li>Join() Method :Joins all elements of an array .</li>
+        <li>Pop() & Push() Method : Pop removes last element from array .Push adds element to the array. </li>
+        <li>Shift() & UnShift() Method : Shift removes first element of an array.Unshift adds element at beginning of an array.</li>
+        <li>Slice() Method : Slice() method returns a new array containing a portion of the array on which it is implemented. The original remains unchanged.</li>
+        <li>Splice() Method :This method is used to add/remove an item from the given array. </li>
+        <li>Concate() Method : Its is used for concatenating two arrays. </li>
+        <li>Map() Method :Map method creates a new array with the results of called function for every array element. </li>
+        <li>Reverse() Method : This method reverses the array.</li>
+    </ol>
+    </p>
+    <br>
+    <p style="color: blueviolet;">String Methods :
+        <ol>
+            <li> Length() Method: Returns lenght of an String.</li>
+            <li>IndexOf() Method:It returns the index of (the position of) the first occurrence of a specified text in a string.</li>
+            <li>LastIndexOf() Method :It returns the index of the last occurrence of a specified text in a string .</li>
+            <li>Search()  Method : It position of the first occurrence of a specified text in a string. </li>
+            <li>Slice() Method : Slice() extracts a part of a string and returns the extracted part in a new string.</li>
+            <li>Substring()  Method :This method extracts a part of a string and returns the extracted part in a new string. </li>
+            <li>Substr()  Method :Substr() is similar to slice(). The difference is that the second parameter specifies the length of the extracted part. </li>
+            <li>Concate() Method : Its is used for concatenating two arrays. </li>
+            <li>Replace() Method :The  method replaces a specified value with another value in a string. </li>
+            <li>toUpperCase() & toLowerCase() :A string is converted to upper case with toUpperCase().A string is converted to upper case with toUpperCase(). </li>
+            <li>Concate() Method : Its is used for concatenating two or more strings. </li>
+            <li>Trim() Method :This method removes whitespace from both sides of a string. </li>
+            <li>CharAt() Method :This method returns the character at a specified index (position) in a string.</li>
+            <li>CharCodeAt() Method :This method returns the unicode of the character at a specified index in a string.</li>
+            <li>Split() Method : A string can be converted to an array with the split() method.</li>
+        </ol>
+        </p>
+        
+
+
+
+    <script>
+
+        // ARRAY METHODS :
+        var arr =[10,40,30,70];
+        var sq=[81,9,100,169];
+        var cars =['Volvo','Mercedes','Audi','Honda'];
+        var girls=['jerry','martha','sam'];
+        var boys =['john','tom','jonas'];
+        console.log("I] Implementing Different Methods of Array :");
+        console.log(' Length of Array is :'+arr.length);
+        console.log(' Before Sorting :'+arr);
+        console.log(' After Sorting :'+arr.sort());
+        console.log(" The value 70 is at index of :"+arr.indexOf(70));
+        console.log(" Joining all elements of array with (*) using Join() :"+arr.join("*"));
+        console.log(" Removing last element of Array Using Pop() :"+arr.pop());
+        console.log(" Adding 70 in the array using Push():"+arr.push(70)); 
+        console.log(" Removed First Element Of Array Using Shift() :"+arr.shift());  // Removes the first element 10  from arr
+        console.log(" Adds New Element 80 At Beginning Of Array Using UnShift() :"+arr.unshift(80)); // Returns 4
+        /* Slice Method :The arr.slice() method returns a new array containing a portion of the array on which it is implemented. The original remains unchanged.*/
+        console.log(' Default Array Is :'+arr); // [80,30,40,70]
+        console.log(" Array after slicing the at 2 position the new Array is : "+arr.slice(2,4)); //[ 40,70]
+
+        /*Splicing Method :This method is used to add/remove an item from the given array.*/
+
+        cars.splice(2, 0, 'Ambassedor', 'BMW', 'Audi');
+        console.log(" Array after slpicing -Adding the at 2 position the Array is : "+cars); //[Volvo,Mercedes,Ambassedor,BMW,Audi,Audi,Honda]
+
+        cars.splice(2,1);
+        console.log(" Array after slpicing -Removing the element at 2 position the Array is : "+cars); //[Volvo,Mercedes,BMW,Audi,Audi,Honda]
+
+        /*Concatenating two arrays using Concate() Method :*/
+        var all = girls.concat(boys); //['jerry','martha','sam']+['john','tom','jonas'];
+        console.log(" Result After Concatenating Two Arrays :"+all); //[jerry,martha,sam,john,tom,jonas]
+ 
+        /*The arr.map() method creates a new array with the results of called function for every array element.  */
+
+        console.log(" Map() will return the squareroot of all elements  :"+ sq.map(Math.sqrt));
+        console.log("The reversed the array :"+arr.reverse());
+        console.log("");
+     // STRING METHODS :
+     console.log("II] Implementing Different Methods of String :");
+
+    var rep ="The String is unchanged.";
+    var text1 = "Hello";
+    var text2 = "World";
+     var str="   Hello World Hello   ";
+     var str1 = "Apple, Banana, Kiwi";
+     console.log(" Length of String is : "+ str.length);
+     console.log(" The index of Hello String is :"+str.indexOf("Hello"));
+     console.log(" The last index of Hello String is :"+str.lastIndexOf("Hello"));
+    console.log(" The first occurance of searched string index is :"+str.search("World"));
+      console.log(" Slicing the a string at 7,13  :"+str1.slice(7,13));
+     console.log(" Substring between( 7,13) is   :"+str1.substring(7, 13));
+     console.log(" Substr between( 7) is   :"+str1.substr(-4));
+    console.log("Before Replacing String is :"+rep);
+    console.log("Before Replacing String is :"+rep.replace("unchanged","changed"));
+    console.log(" String is converted to uppercase :"+rep.toUpperCase());
+    console.log("String is converted to lowercase :"+rep.toLowerCase());
+    console.log("Concatenating two strings"+ text1.concat(" ", text2));
+    console.log("Before triming the result is :" + str);
+    console.log("After triming the result is :" + str.trim());
+    console.log("The charAt(4) in the string is  :" +rep.charAt(4));
+    console.log("The Unicode of charAt(4) in the string is  :" +rep.charCodeAt(4));
+    var sp=rep.split(' ',3);
+    console.log("The string is splitted using comma(,)  :" +sp);
+        </script>
+</body>
+</html>
