@@ -1,4 +1,7 @@
- Console Function Methods:
+<html>
+<body>
+<p>
+Console Function Methods:
 
 1. Console.log();  :
  >The Console.log() method writes a messge to the console.
@@ -156,5 +159,10 @@ Example:
         console.assert(document.getElementById("demo"), "You have no element with ID 'demo'");
    </script>
 </body>
+</html>
+
+</body>
+</p>
+
 </html>
 
