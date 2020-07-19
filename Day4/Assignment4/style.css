@@ -1,0 +1,26 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.button{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 2px;
+    cursor: pointer;
+}
+.textview{
+    width:208px;
+    margin: 5;
+    font-size: 25px;
+    padding: 5px;
+    background-image: linear-gradient(to right,rgb(237, 240, 243), rgba(239, 243, 22, 0.945)); 
+}
+.main{
+   position: absolute;
+   top:50%;
+   left: 50%;
+   transform: translateX(-50%)translateY(-50%);
+   background-image: linear-gradient(red, yellow);  
+}
